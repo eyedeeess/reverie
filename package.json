@@ -8,6 +8,7 @@
     "test": "pipenv run python manage.py test"
   },
   "dependencies": {
-    "gulp-clean-css": "^3.9.4"
+    "gulp-clean-css": "^3.9.4",
+    "gulp-sass": "^4.0.1"
   }
 }

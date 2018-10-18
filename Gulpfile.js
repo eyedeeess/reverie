@@ -2,6 +2,7 @@ const gulp = require('gulp');
 
 const css = require('gulp-clean-css');
 const mjml = require('gulp-mjml');
+const sass = require('gulp-sass');
 
 gulp.task('emails', function() {
   return gulp.src('./assets/src/mjml/*.mjml')
@@ -15,4 +16,15 @@ gulp.task('css', function() {
     .pipe(gulp.dest('./assets/dist/css/'))
 });
 
-gulp.task('default', ['emails', 'css']);
+gulp.task('sass', function() {
+  return gulp.src('./assets/src/sass/*.sass')
+    .pipe(sass({
+      includePaths: [
+        'node_modules/bulma',
+        'node_modules/bulma-timeline/dist/css',
+      ]
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('./assets/dist/css/'))
+});
+
+gulp.task('default', ['emails', 'css', 'sass']);

@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
   <head>
     <title>
@@ -17,7 +19,8 @@
     <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css" integrity="sha256-zKA1Bf41O96+gJSlkn/Bh2HATW/OhwkApPlYTp3B5O8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static "css/main.css" %}" />
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     {# FIXME: Static Resources #}
@@ -59,7 +62,7 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item has-text-weight-bold" href="/">
+        <a class="navbar-item has-text-weight-bold" href="{% url 'splash:index' %}'">
           Reverie
         </a>
 

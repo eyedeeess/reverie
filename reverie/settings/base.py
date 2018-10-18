@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'registration',
     'two_factor',
     'widget_tweaks',
+    'zappa_django_utils',
 
     # Django Contrib
     'django.contrib.admin',
